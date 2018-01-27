@@ -1,6 +1,10 @@
-var meals = {};
-var meals = new Object();
-var meals = { breakfast: "oatmeal"}
-var meals = new Object({breakfast: 'oatmeal'})
+var playlist = { Eminem: "Lose Yourself"}
 
-var meals = { breakfast: 'eggs', breakfast: 'bacon'}
+function updatePlaylist(playlist, artist, song){
+  return Object.assign({}, playlist, {artist: song})
+}
+
+function removeFromPlaylist(playlist, artist){
+  delete playlist.artist
+  return playlist
+}
